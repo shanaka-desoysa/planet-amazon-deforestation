@@ -10,7 +10,7 @@ from multiprocessing import cpu_count
 from concurrent.futures import ThreadPoolExecutor
 
 
-def get_jpeg_data_files_paths():
+def get_jpeg_data_files_paths(data_root_folder):
     """
     Returns the input file folders path
     
@@ -18,7 +18,7 @@ def get_jpeg_data_files_paths():
         The input file paths as list [train_jpeg_dir, test_jpeg_dir, test_jpeg_additional, train_csv_file]
     """
 
-    data_root_folder = os.path.abspath("../input/")
+    #data_root_folder = os.path.abspath("../input/")
     train_jpeg_dir = os.path.join(data_root_folder, 'train-jpg')
     test_jpeg_dir = os.path.join(data_root_folder, 'test-jpg')
     test_jpeg_additional = os.path.join(data_root_folder, 'test-jpg-additional')
